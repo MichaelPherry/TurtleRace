@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bvj26mfnxaoal"]
+
+[node name="shop" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 115.0
+offset_top = 78.0
+offset_right = 653.0
+offset_bottom = 323.0
+text = "SHOP
+I'm to tired atm
+
+:3
+for now want to list all of the items that we have and put them in the shop. 
+So that we can get down buying an item and making sure it's then in the players
+inventory.
+Eventually we'll have it be randomized and what not"
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

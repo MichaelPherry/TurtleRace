@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dti34urotnl0g"]
+
+[ext_resource type="Script" path="res://Passives/coffee.gd" id="1_cyld8"]
+
+[resource]
+script = ExtResource("1_cyld8")
+name = "Coffee"
+description = "That morning cup oSlight speed increase"
