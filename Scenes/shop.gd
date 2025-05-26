@@ -21,5 +21,5 @@ func _process(delta):
 
 
 func _on_item_list_item_activated(index):
-	print("I shit myself")
+	print("test")
 	pass # Replace with function body.
