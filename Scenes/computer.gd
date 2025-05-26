@@ -29,7 +29,7 @@ func _physics_process(delta):
 	if health_check and race_health <= 0:
 		health_check = false
 		multiplier = 0.5
-		print('COMP DEAD')
+		print('COMP DED')
 	velocity.y = SPEED * multiplier
 
 	move_and_slide()
