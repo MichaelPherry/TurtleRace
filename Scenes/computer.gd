@@ -19,6 +19,13 @@ func _ready():
 	sprite.speed_scale *= multiplier
 	
 func _physics_process(delta):
+<<<<<<< HEAD
+=======
+	if health_check and race_health <= 0:
+		health_check = false
+		multiplier = 0.5
+		print('COMP DED')
+>>>>>>> fad038675d4454ad84fef8af70c5b48c2ed68548
 	velocity.y = SPEED * multiplier
 
 	move_and_slide()
