@@ -20,5 +20,5 @@ func _on_body_exited(body):
 			body.sprite.play("Standing")
 			print("%s has finished the race!" % body.name)
 			if len(finished_turts) >= 2:
-				pass
-			#	get_tree().change_scene_to_file("res://Scenes/shop.tscn")
+				#pass
+				get_tree().change_scene_to_file("res://Scenes/shop.tscn")
