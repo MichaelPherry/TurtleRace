@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://bvj26mfnxaoal"]
+[gd_scene load_steps=2 format=3 uid="uid://bvj26mfnxaoal"]
+
+[ext_resource type="Script" path="res://Scenes/shop.gd" id="1_3l8jy"]
 
 [node name="shop" type="Node2D"]
+script = ExtResource("1_3l8jy")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 115.0
@@ -17,5 +20,9 @@ inventory.
 Eventually we'll have it be randomized and what not"
 
 [node name="ItemList" type="ItemList" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 117.0
+offset_top = 292.0
+offset_right = 396.0
+offset_bottom = 444.0
+
+[connection signal="item_activated" from="ItemList" to="." method="_on_item_list_item_activated"]
