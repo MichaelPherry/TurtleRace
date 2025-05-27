@@ -19,6 +19,6 @@ func _on_body_exited(body):
 			body.sprite.speed_scale = 1
 			body.sprite.play("Standing")
 			print("%s has finished the race!" % body.name)
-			if len(finished_turts) >= 2:
+			if len(finished_turts) >= 1:
 				#pass
 				get_tree().change_scene_to_file("res://Scenes/shop.tscn")

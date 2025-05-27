@@ -5,7 +5,7 @@ const SPEED = 10
 var multiplier = 4
 
 #If health falls to zero your speed slows drastically
-const full_health = 0
+const full_health = 3
 var health_buff = 0
 var race_health = 3
 var health_check = true
