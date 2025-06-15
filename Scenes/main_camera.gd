@@ -32,3 +32,6 @@ func _process(delta):
 	global_position = center  
 	print(max_pos.y - min_pos.y)
 	update_zoom(max_pos.y - min_pos.y)
+	
+#quick change
+
