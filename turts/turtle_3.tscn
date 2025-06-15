@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b6ted173sekb"]
 
-[ext_resource type="Script" path="res://turts/turtle.gd" id="1_iu0ao"]
+[ext_resource type="Script" path="res://turts/turtle_3.gd" id="1_u6oxt"]
 [ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_ihwkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
@@ -84,7 +84,7 @@ radius = 5.0
 height = 28.0
 
 [node name="Turtle3" type="CharacterBody2D"]
-script = ExtResource("1_iu0ao")
+script = ExtResource("1_u6oxt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -94,6 +94,3 @@ animation = &"Standing"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_afxjx")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)

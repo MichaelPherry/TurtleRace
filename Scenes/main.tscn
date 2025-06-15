@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bf44mmwl5sshj"]
+[gd_scene load_steps=11 format=3 uid="uid://bf44mmwl5sshj"]
 
 [ext_resource type="Texture2D" uid="uid://dyo8s4u413qhs" path="res://Art/Racetrack.png" id="1_oni7n"]
 [ext_resource type="PackedScene" uid="uid://dibf0t6sxxxyp" path="res://turts/turtle.tscn" id="2_xiu71"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/FinishLine.gd" id="4_1rket"]
 [ext_resource type="PackedScene" uid="uid://b6ted173sekb" path="res://turts/turtle_3.tscn" id="4_k5tcr"]
 [ext_resource type="PackedScene" uid="uid://c2tlf8saaaa6y" path="res://turts/turtle_4.tscn" id="5_gfehn"]
+[ext_resource type="Script" path="res://Scenes/main_camera.gd" id="7_8yu1y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ukur"]
 texture = ExtResource("1_oni7n")
@@ -96,5 +97,9 @@ script = ExtResource("4_1rket")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
 position = Vector2(143, 376)
 shape = SubResource("RectangleShape2D_rpk1i")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(147, 216)
+script = ExtResource("7_8yu1y")
 
 [connection signal="body_exited" from="FinishLine" to="FinishLine" method="_on_body_exited"]
