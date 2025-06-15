@@ -1,0 +1,28 @@
+{
+  "Common": {
+	"Coffee": {
+	  "ItemDesc": "Love my cup of Joe",
+	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+	},
+	"Gun": {
+	  "ItemDesc": "Shoot my Opps!",
+	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+	},
+	"Slime": {
+	  "ItemDesc": "Slow down enemy",
+	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+	}
+  },
+  "Rare": {
+	"Running Shoes": {
+	  "ItemDesc": "Run quick",
+	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+	}
+  },
+  "Epic": {
+	"Glock with Switch": {
+	  "ItemDesc": "Shoot my Opps with Speed!",
+	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+	}
+  }
+}
