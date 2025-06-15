@@ -19,6 +19,7 @@ inventory.
 Eventually we'll have it be randomized and what not"
 
 [node name="ItemList" type="ItemList" parent="."]
+
 offset_left = 121.0
 offset_top = 296.0
 offset_right = 480.0
@@ -26,3 +27,4 @@ offset_bottom = 433.0
 script = ExtResource("1_u42t0")
 
 [connection signal="item_activated" from="ItemList" to="ItemList" method="_on_item_activated"]
+
