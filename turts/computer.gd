@@ -5,7 +5,7 @@ const SPEED = 10
 var multiplier = 4
 
 #If health falls to zero your speed slows drastically
-const full_health = 0
+const full_health = 3
 var health_buff = 0
 var race_health = 3
 var health_check = true
@@ -28,7 +28,7 @@ func _ready():
 func _physics_process(delta):
 	if health_check and race_health <= 0:
 		health_check = false
-		multiplier = 0.5
+		multiplier = 0.75
 		print('COMP DEAD')
 	velocity.y = SPEED * multiplier
 
