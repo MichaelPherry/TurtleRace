@@ -1,42 +1,42 @@
-[gd_scene load_steps=14 format=3 uid="uid://dj1g7dhdbyjq1"]
+[gd_scene load_steps=14 format=3 uid="uid://c2tlf8saaaa6y"]
 
-[ext_resource type="Script" path="res://turtle.gd" id="1_8x44d"]
-[ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_2cvkk"]
+[ext_resource type="Script" path="res://turts/turtle_4.gd" id="1_i3oiq"]
+[ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_xksey"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfox3"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j5v37"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4on8"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ds1mq"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uipqf"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bx07k"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1gv3"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ietje"]
-atlas = ExtResource("2_2cvkk")
+atlas = ExtResource("2_xksey")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7d6t"]
@@ -83,8 +83,8 @@ animations = [{
 radius = 5.0
 height = 28.0
 
-[node name="Turtle" type="CharacterBody2D"]
-script = ExtResource("1_8x44d")
+[node name="Turtle4" type="CharacterBody2D"]
+script = ExtResource("1_i3oiq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -94,6 +94,3 @@ animation = &"Standing"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_afxjx")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)

@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@export var description: String
+@export var icon: Texture2D
+
 const player = "human turtle"
 const SPEED = 10
 var multiplier = 4

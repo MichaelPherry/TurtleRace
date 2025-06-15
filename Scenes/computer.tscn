@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d2xj2tsyqy4kf"]
+[gd_scene load_steps=14 format=3 uid="uid://bn2xppvvagyj7"]
 
 [ext_resource type="Script" path="res://Scenes/computer.gd" id="1_bv2uc"]
 [ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_nesvt"]

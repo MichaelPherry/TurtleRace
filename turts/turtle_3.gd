@@ -1,6 +1,9 @@
 extends CharacterBody2D
 
-const player = "computer turtle"
+@export var description: String
+@export var icon: Texture2D
+
+const player = "human turtle"
 const SPEED = 10
 var multiplier = 4
 
@@ -11,8 +14,9 @@ var race_health = 3
 var health_check = true
 @onready var sprite = $AnimatedSprite2D
 
-var passives = [preload("res://Passives/outtaBreath.tres")]
-var items_lst = []
+var passives = [preload("res://Passives/coffee.tres")]
+var item_holding = []
+var item_use = []
 
 func _ready():
 	#Initializes a group to check when a turt has crossed the finish line
@@ -22,15 +26,19 @@ func _ready():
 	
 	for boost in passives:
 		boost.apply(self)
-		
+	
 	sprite.speed_scale *= multiplier
 	
 func _physics_process(delta):
 	if health_check and race_health <= 0:
 		health_check = false
 		multiplier = 0.5
-		print('COMP DEAD')
+		print('Turt DEAD')
 	velocity.y = SPEED * multiplier
 
 	move_and_slide()
 
+	
+	
+
+	
