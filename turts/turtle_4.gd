@@ -40,5 +40,6 @@ func _physics_process(delta):
 
 	
 	
-
+func use_item():
+	print("player 4")
 	

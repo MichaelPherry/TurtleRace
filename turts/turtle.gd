@@ -16,7 +16,6 @@ var health_check = true
 
 var passives = [preload("res://Passives/coffee.tres")]
 var item_holding = []
-var item_use = []
 
 func _ready():
 	#Initializes a group to check when a turt has crossed the finish line
@@ -38,7 +37,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	
+func use_item():
+	print("yooo")
+	#var item = item_holding[0]
+	#item.apply(self)
 	
 
 	
