@@ -39,6 +39,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	
-	
+func use_item():
+	print("player 3")
 
 	
