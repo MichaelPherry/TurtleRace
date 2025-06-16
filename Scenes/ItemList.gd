@@ -1,15 +1,12 @@
 extends ItemList
-
-var itemList = ["Coffee", "Test", "Test2"]
-var itemImage = {"Coffee" : "res://Art/Coffee Mug 001 16x161.png", 
-"Test" : "res://Art/Coffee Mug 001 16x161.png", 
-"Test2" : "res://Art/Coffee Mug 001 16x161.png"}
-
-
+var rng = RandomNumberGenerator.new()
+var weights = PackedFloat32Array([1, 1, 1, 1, 0.5])
+#weights will assign a weight to each index, ie index 0 has a weight of 1, index
+#4 has a weight of 0.5 meaning 1 is more likely to get picked
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for item in itemList:
-		var texture = load(itemImage[item]) as Texture2D
+	for item in ItemData.item_data:
+		var texture = load(item["ItemImage"]) as Texture2D
 		add_item(item, texture)
 
 
