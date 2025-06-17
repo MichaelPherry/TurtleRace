@@ -23,3 +23,4 @@ func _on_body_exited(body):
 
 				#pass
 				get_tree().change_scene_to_file("res://Scenes/shop.tscn")
+				queue_free()

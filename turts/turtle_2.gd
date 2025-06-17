@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var icon: Texture2D
 
 const player = "human turtle"
-const SPEED = 4
+const SPEED = 10
 var multiplier = 4
 
 #If health falls to zero your speed slows drastically

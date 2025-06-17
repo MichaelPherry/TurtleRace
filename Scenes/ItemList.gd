@@ -5,10 +5,12 @@ var weights = PackedFloat32Array([1, 1, 1, 1, 0.5])
 #4 has a weight of 0.5 meaning 1 is more likely to get picked
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print(ItemData.item_data)
 	for item in ItemData.item_data:
-		var texture = load(item["ItemImage"]) as Texture2D
-		add_item(item, texture)
-
+		#var texture = load(item["ItemImage"]) as Texture2D
+		#print(item)
+		#add_item(item, texture)
+		pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
