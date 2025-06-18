@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://crqh13pjvvmxp"]
+[gd_scene load_steps=4 format=3 uid="uid://crqh13pjvvmxp"]
 
-[node name="Missile" type="Node2D"]
+[ext_resource type="Script" path="res://Items/missile.gd" id="1_ehi04"]
+[ext_resource type="Texture2D" uid="uid://wvxk1lye7tqv" path="res://Art/Coffee Mug 001 16x161.png" id="2_c1xmc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml7fo"]
+radius = 9.0
+height = 18.0
+
+[node name="Missile" type="CharacterBody2D"]
+script = ExtResource("1_ehi04")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.125, 1.0625)
+texture = ExtResource("2_c1xmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_ml7fo")

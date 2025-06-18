@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o27yymbq4duj"]
 
-[ext_resource type="Script" path="res://StartScreen.gd" id="1_lscvg"]
+[ext_resource type="Script" path="res://Scripts/StartScreen.gd" id="1_lscvg"]
 
 [node name="StartScreen" type="Node2D"]
 script = ExtResource("1_lscvg")
@@ -44,9 +44,9 @@ text = "Turtle 4
 "
 
 [connection signal="pressed" from="Player1" to="." method="_on_player_1_pressed"]
-[connection signal="pressed" from="Player2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Player2" to="." method="_on_player_2_pressed"]
-[connection signal="pressed" from="Player3" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Player2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Player3" to="." method="_on_player_3_pressed"]
-[connection signal="pressed" from="Player4" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Player3" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Player4" to="." method="_on_player_4_pressed"]
+[connection signal="pressed" from="Player4" to="." method="_on_button_pressed"]
