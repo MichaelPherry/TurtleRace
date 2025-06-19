@@ -12,6 +12,7 @@ const full_health = 3
 var health_buff = 0
 var race_health = 3
 var health_check = true
+var finished = false
 @onready var sprite = $AnimatedSprite2D
 
 var passives = [preload("res://Passives/coffee.tres")]
@@ -31,9 +32,11 @@ func _ready():
 	sprite.speed_scale *= multiplier
 	
 func _physics_process(delta):
+	if finished == true:
+		return
 	if health_check and race_health <= 0:
 		health_check = false
-		multiplier = 0.5
+		multiplier *= 0.5
 		print('Turt DEAD')
 	velocity.y = SPEED * multiplier
 	move_and_slide()
