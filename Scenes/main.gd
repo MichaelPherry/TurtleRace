@@ -1,5 +1,5 @@
 extends Node
-
+var finished_turts = []
 var character
 var player_scene
 var enemy_target
@@ -42,3 +42,16 @@ func _on_option_button_item_selected(index):
 			enemy_target = "Turtle3"
 		"Turtle 4":
 			enemy_target = "Turtle4"
+
+
+func _on_finish_line_body_exited(body):
+	if body.is_in_group("turt_player"):
+		if body.name not in finished_turts:
+			finished_turts.append(body)
+			body.finished = true
+			body.sprite.speed_scale = 1
+			body.sprite.play("Standing")
+			print("%s has finished the race!" % body.name)
+			if len(finished_turts) >= 4:
+				get_tree().change_scene_to_file("res://Scenes/shop.tscn")
+				queue_free()
