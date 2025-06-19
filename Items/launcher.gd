@@ -3,7 +3,6 @@ extends "res://Items/items.gd"
 
 func apply(main, user, target):
 	var missile_instance = missile.instantiate()
-	print(user.global_position)
 	missile_instance.target = target
 	missile_instance.global_position = user.global_position
 	main.root.add_child(missile_instance)

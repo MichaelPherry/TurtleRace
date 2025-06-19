@@ -12,7 +12,8 @@ func _process(delta):
 	var target_angle = to_target.angle()
 	rotation = lerp_angle(rotation, target_angle, turn_speed * delta)
 	position += transform.x * speed * delta
-	
-func apply(turt):
-	pass
-	
+
+func _on_body_entered(body):
+	if body.is_in_group('woo'):
+		pass
+		

@@ -20,6 +20,7 @@ var item_holding = []
 func _ready():
 	#Initializes a group to check when a turt has crossed the finish line
 	add_to_group("turt_player")
+	add_to_group("turt2")
 	sprite.play("Walking")
 	race_health = full_health + health_buff
 	
