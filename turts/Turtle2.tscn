@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxp00n2k36k1"]
+[gd_scene load_steps=14 format=3 uid="uid://d3ea3ujna27vv"]
 
 [ext_resource type="Script" path="res://turts/Turtle2.gd" id="1_ch7k7"]
 [ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_drrf6"]

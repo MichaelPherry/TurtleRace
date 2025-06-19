@@ -46,4 +46,19 @@ func use_item(main, pos, target):
 func take_damage(amt):
 	race_health -= amt
 
+func flash():
+	var sprite = $AnimatedSprite2D
+	multiplier /= -5
+	sprite.modulate = Color(1, 1, 1, 0.2)
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 1) 
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 0.2)
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 1) 
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 0.2)
+	await get_tree().create_timer(0.1).timeout
+	sprite.modulate = Color(1, 1, 1, 1) 
+	multiplier *= -5
 	
