@@ -40,5 +40,8 @@ func _physics_process(delta):
 func use_item(main, pos, target):
 	item_holding.apply(main, pos, target)
 	
+func take_damage(amt):
+	race_health -= amt
+	
 
 	

@@ -1,4 +1,4 @@
-extends CharacterBody2D
+extends Area2D
 
 @export var speed: float = 100
 var target
@@ -13,7 +13,7 @@ func _process(delta):
 	rotation = lerp_angle(rotation, target_angle, turn_speed * delta)
 	position += transform.x * speed * delta
 
-func _on_body_entered(body):
-	if body.is_in_group('woo'):
-		pass
-		
+func _on_body_entered(body):	
+	if body == target:
+		body.take_damage(1)
+		queue_free()
