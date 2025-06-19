@@ -15,5 +15,6 @@ func _process(delta):
 
 func _on_body_entered(body):	
 	if body == target:
-		body.take_damage(1)
 		queue_free()
+		body.take_damage(1)
+		body.flash()
