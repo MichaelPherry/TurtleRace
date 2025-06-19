@@ -16,12 +16,11 @@ var health_check = true
 
 var passives = [preload("res://Passives/coffee.tres")]
 var item_holding = []
-var item_use = []
 
 func _ready():
 	#Initializes a group to check when a turt has crossed the finish line
 	add_to_group("turt_player")
-	add_to_group("turt4")
+	add_to_group("turt2")
 	sprite.play("Walking")
 	race_health = full_health + health_buff
 	
@@ -39,8 +38,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 
+func use_item(main, pos, target):
+	item_holding.apply(main, pos, target)
 	
-	
-func use_item():
-	print("player 4")
-	
+func take_damage(amt):
+	race_health -= amt
