@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://o27yymbq4duj"]
 
-[ext_resource type="Script" path="res://StartScreen.gd" id="1_lscvg"]
+[ext_resource type="Script" path="res://Scripts/StartScreen.gd" id="1_lscvg"]
 
 [node name="StartScreen" type="Node2D"]
 script = ExtResource("1_lscvg")

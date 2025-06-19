@@ -91,6 +91,8 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_n7d6t")
 animation = &"Standing"
 
+[node name="Marker2D" type="Marker2D" parent="AnimatedSprite2D"]
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_afxjx")
