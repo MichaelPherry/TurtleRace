@@ -5,7 +5,7 @@ class_name Item
 @export var description: String
 @export var icon: Texture2D
 
-func apply(turt):
+func apply(main, user, target):
 	push_warning("apply() not implemented for %s" % name)
 
 
