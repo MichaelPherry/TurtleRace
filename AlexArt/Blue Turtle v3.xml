@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Blue Turtle v3.png">
+	<!-- Created with Adobe Animate version 24.0.9.74 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Turtle Jog0000" x="0" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0001" x="549" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0002" x="1098" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0003" x="1647" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0004" x="2196" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0005" x="2745" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0006" x="3294" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0007" x="0" y="511" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0008" x="549" y="511" width="549" height="511"/>
+	<SubTexture name="Turtle Jog0009" x="0" y="0" width="549" height="511"/>
+	<SubTexture name="Turtle Run0000" x="1098" y="511" width="681" height="510"/>
+	<SubTexture name="Turtle Run0001" x="1779" y="511" width="681" height="510"/>
+	<SubTexture name="Turtle Run0002" x="2460" y="511" width="681" height="510"/>
+	<SubTexture name="Turtle Run0003" x="3141" y="511" width="681" height="510"/>
+	<SubTexture name="Turtle Run0004" x="0" y="1022" width="681" height="510"/>
+	<SubTexture name="Turtle Run0005" x="681" y="1022" width="681" height="510"/>
+	<SubTexture name="Turtle Run0006" x="1362" y="1022" width="681" height="510"/>
+	<SubTexture name="Turtle Run0007" x="2043" y="1022" width="681" height="510"/>
+	<SubTexture name="Turtle Run0008" x="2724" y="1022" width="681" height="510"/>
+	<SubTexture name="Turtle Run0009" x="1098" y="511" width="681" height="510"/>
+	<SubTexture name="Turtle Walk0000" x="3405" y="1022" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0001" x="0" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0002" x="409" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0003" x="818" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0004" x="1227" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0005" x="1636" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0006" x="2045" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0007" x="2454" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0008" x="2863" y="1532" width="409" height="507"/>
+	<SubTexture name="Turtle Walk0009" x="3405" y="1022" width="409" height="507"/>
+</TextureAtlas>
