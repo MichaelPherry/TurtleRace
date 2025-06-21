@@ -1,12 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bf44mmwl5sshj"]
+[gd_scene load_steps=11 format=3 uid="uid://bf44mmwl5sshj"]
 
-[ext_resource type="Script" uid="uid://pyuauqx4fie4" path="res://Scenes/main.gd" id="1_0kdqu"]
+[ext_resource type="Script" uid="uid://0r1cxtqlws6t" path="res://Scenes/main.gd" id="1_0kdqu"]
 [ext_resource type="Texture2D" uid="uid://dyo8s4u413qhs" path="res://Art/Racetrack.png" id="1_oni7n"]
 [ext_resource type="PackedScene" uid="uid://dibf0t6sxxxyp" path="res://turts/turtle.tscn" id="2_xiu71"]
-[ext_resource type="PackedScene" uid="uid://bxp00n2k36k1" path="res://turts/turtle_2.tscn" id="3_vfqr6"]
-[ext_resource type="Script" uid="uid://bmrwmjbro61c3" path="res://Scenes/FinishLine.gd" id="4_1rket"]
-[ext_resource type="PackedScene" uid="uid://b6ted173sekb" path="res://turts/turtle_3.tscn" id="4_k5tcr"]
-[ext_resource type="PackedScene" uid="uid://c2tlf8saaaa6y" path="res://turts/turtle_4.tscn" id="5_gfehn"]
+[ext_resource type="PackedScene" uid="uid://d3ea3ujna27vv" path="res://turts/Turtle2.tscn" id="3_vfqr6"]
+[ext_resource type="PackedScene" uid="uid://b6ted173sekb" path="res://turts/Turtle3.tscn" id="4_k5tcr"]
+[ext_resource type="PackedScene" uid="uid://c2tlf8saaaa6y" path="res://turts/Turtle4.tscn" id="5_gfehn"]
 [ext_resource type="Script" uid="uid://bp0jppirvh1i0" path="res://Scenes/main_camera.gd" id="7_8yu1y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ukur"]
@@ -94,7 +93,6 @@ position = Vector2(176, 19)
 position = Vector2(240, 19)
 
 [node name="FinishLine" type="Area2D" parent="."]
-script = ExtResource("4_1rket")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
 position = Vector2(143, 376)
@@ -112,13 +110,20 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -219.0
-offset_top = -104.0
-offset_right = -17.0
-offset_bottom = -9.0
+offset_left = -210.0
+offset_top = -237.0
+offset_right = -8.0
+offset_bottom = -142.0
 grow_horizontal = 0
 grow_vertical = 0
 text = "Use Item"
 
-[connection signal="body_exited" from="FinishLine" to="FinishLine" method="_on_body_exited"]
+[node name="OptionButton" type="OptionButton" parent="UI"]
+offset_left = 947.0
+offset_top = 518.0
+offset_right = 1145.0
+offset_bottom = 553.0
+
+[connection signal="body_exited" from="FinishLine" to="." method="_on_finish_line_body_exited"]
 [connection signal="pressed" from="UI/ItemUse" to="." method="_on_item_use_pressed"]
+[connection signal="item_selected" from="UI/OptionButton" to="." method="_on_option_button_item_selected"]

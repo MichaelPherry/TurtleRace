@@ -1,42 +1,46 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2tlf8saaaa6y"]
+[gd_scene load_steps=14 format=3 uid="uid://d3ea3ujna27vv"]
 
-[ext_resource type="Script" uid="uid://b32ketcv412ic" path="res://turts/turtle_4.gd" id="1_i3oiq"]
-[ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_xksey"]
+<<<<<<< HEAD:turts/turtle_2.tscn
+[ext_resource type="Script" uid="uid://b51tjo0e1uh28" path="res://turts/turtle_2.gd" id="1_ch7k7"]
+=======
+[ext_resource type="Script" uid="uid://cnnsm6yvh526h" path="res://turts/Turtle2.gd" id="1_ch7k7"]
+>>>>>>> main:turts/Turtle2.tscn
+[ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_drrf6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jfox3"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j5v37"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4on8"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ds1mq"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uipqf"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(32, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bx07k"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(64, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1gv3"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(96, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ietje"]
-atlas = ExtResource("2_xksey")
+atlas = ExtResource("2_drrf6")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7d6t"]
@@ -83,8 +87,8 @@ animations = [{
 radius = 5.0
 height = 28.0
 
-[node name="Turtle4" type="CharacterBody2D"]
-script = ExtResource("1_i3oiq")
+[node name="Turtle2" type="CharacterBody2D"]
+script = ExtResource("1_ch7k7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

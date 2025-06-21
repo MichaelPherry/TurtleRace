@@ -16,13 +16,13 @@ func change_scene(player):
 	queue_free()
 
 func _on_player_1_pressed():
-	change_scene("turtle")
+	change_scene("Turtle")
 
 func _on_player_2_pressed():
-	change_scene("turtle_2")
+	change_scene("Turtle2")
 
 func _on_player_3_pressed():
-	change_scene("turtle_3")
+	change_scene("Turtle3")
 
 func _on_player_4_pressed():
-	change_scene("turtle_4")
+	change_scene("Turtle4")

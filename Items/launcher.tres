@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://u43lh5p2qcow"]
+
+[ext_resource type="PackedScene" uid="uid://crqh13pjvvmxp" path="res://Items/missile.tscn" id="1_vxqha"]
+[ext_resource type="Script" uid="uid://pcs5u8lycxbn" path="res://Items/launcher.gd" id="2_r5rg8"]
+
+[resource]
+script = ExtResource("2_r5rg8")
+missile = ExtResource("1_vxqha")
+name = "Launcher"
+description = ""
