@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dibf0t6sxxxyp"]
 
-[ext_resource type="Script" path="res://turts/turtle.gd" id="1_8x44d"]
+[ext_resource type="Script" uid="uid://dbl7rkdf0f1ba" path="res://turts/turtle.gd" id="1_8x44d"]
 [ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_2cvkk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
