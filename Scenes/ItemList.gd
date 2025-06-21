@@ -10,6 +10,7 @@ var random_item
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print(item_data)
+	var item_picked = []
 	for item in range(4):
 		#var texture = load(item["ItemImage"]) as Texture2D
 		item_rarity = rng.randf_range(0, 100)
@@ -19,11 +20,14 @@ func _ready():
 			item_rarity = "Rare"
 		elif item_rarity > Common + Rare:
 			item_rarity = "Epic"
-
+		
 		random_item = item_data[item_rarity].keys().pick_random()
+		while random_item in item_picked:									#Used to make sure the same item doesn't appear in the shop more than once
+			random_item = item_data[item_rarity].keys().pick_random()		#This is for sure ass code
 		print(random_item)
 		var texture = load(item_data[item_rarity][random_item]["ItemImage"]) as Texture2D
 		add_item(random_item, texture)
+		item_picked.append(random_item)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
