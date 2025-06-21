@@ -1,10 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://d3ea3ujna27vv"]
 
-<<<<<<< HEAD:turts/turtle_2.tscn
-[ext_resource type="Script" uid="uid://b51tjo0e1uh28" path="res://turts/turtle_2.gd" id="1_ch7k7"]
-=======
 [ext_resource type="Script" uid="uid://cnnsm6yvh526h" path="res://turts/Turtle2.gd" id="1_ch7k7"]
->>>>>>> main:turts/Turtle2.tscn
 [ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_drrf6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
