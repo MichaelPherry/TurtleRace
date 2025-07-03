@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://bf44mmwl5sshj"]
 
-[ext_resource type="Script" uid="uid://0r1cxtqlws6t" path="res://Scenes/main.gd" id="1_0kdqu"]
+[ext_resource type="Script" uid="uid://cqlgcvuh757wx" path="res://Scenes/main.gd" id="1_0kdqu"]
 [ext_resource type="Texture2D" uid="uid://dyo8s4u413qhs" path="res://Art/Racetrack.png" id="1_oni7n"]
-[ext_resource type="PackedScene" uid="uid://dibf0t6sxxxyp" path="res://turts/turtle.tscn" id="2_xiu71"]
-[ext_resource type="PackedScene" uid="uid://d3ea3ujna27vv" path="res://turts/Turtle2.tscn" id="3_vfqr6"]
+[ext_resource type="PackedScene" uid="uid://db7g30qwdmlgt" path="res://turts/turtle.tscn" id="2_xiu71"]
+[ext_resource type="PackedScene" uid="uid://bhihljnujwsal" path="res://turts/Turtle2.tscn" id="3_vfqr6"]
 [ext_resource type="PackedScene" uid="uid://b6ted173sekb" path="res://turts/Turtle3.tscn" id="4_k5tcr"]
 [ext_resource type="PackedScene" uid="uid://c2tlf8saaaa6y" path="res://turts/Turtle4.tscn" id="5_gfehn"]
-[ext_resource type="Script" uid="uid://bp0jppirvh1i0" path="res://Scenes/main_camera.gd" id="7_8yu1y"]
+[ext_resource type="Script" uid="uid://khsqi5e7wswd" path="res://Scenes/main_camera.gd" id="7_8yu1y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2ukur"]
 texture = ExtResource("1_oni7n")

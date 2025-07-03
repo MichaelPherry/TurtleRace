@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://crqh13pjvvmxp"]
 
-[ext_resource type="Script" uid="uid://wpsquwxt73sx" path="res://Items/missile.gd" id="1_ehi04"]
+[ext_resource type="Script" uid="uid://3cq75gi5krjh" path="res://Items/missile.gd" id="1_ehi04"]
 [ext_resource type="Texture2D" uid="uid://wvxk1lye7tqv" path="res://Art/Coffee Mug 001 16x161.png" id="2_c1xmc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml7fo"]
