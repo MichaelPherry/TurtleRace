@@ -25,8 +25,9 @@ func _on_item_use_pressed():
 		return
 	var tree = get_tree()
 	var temp_users = get_node(character)
-	var temp_enemy = get_node(enemy_target) #/AnimatedSprite2D/Marker2D")
-	player_scene.use_item(tree, temp_users, temp_enemy)
+	var temp_enemy = get_node(enemy_target)
+	if temp_enemy.finished == false and temp_users.finished == false:
+		player_scene.use_item(tree, temp_users, temp_enemy)
 
 
 func _on_option_button_item_selected(index):
@@ -53,5 +54,7 @@ func _on_finish_line_body_exited(body):
 			body.sprite.play("Standing")
 			print("%s has finished the race!" % body.name)
 			if len(finished_turts) >= 4:
+				print("\n\n\n\n\nDONE\n\n\n\n")
+				await get_tree().create_timer(0.5).timeout
 				get_tree().change_scene_to_file("res://Scenes/shop.tscn")
 				queue_free()

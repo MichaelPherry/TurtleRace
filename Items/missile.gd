@@ -3,6 +3,7 @@ extends Area2D
 @export var speed: float = 100
 var target
 var turn_speed = 20
+var damage = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -16,5 +17,6 @@ func _process(delta):
 func _on_body_entered(body):	
 	if body == target:
 		queue_free()
-		body.take_damage(1)
-		body.flash()
+		if body.invincible == false:
+			body.take_damage(damage)
+			body.flash()

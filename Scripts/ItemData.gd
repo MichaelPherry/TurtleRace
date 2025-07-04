@@ -10,4 +10,3 @@ func _ready():
 	item_data = item_data_json
 	if(item_data == null):
 		push_warning("shit is empty bro")
-
