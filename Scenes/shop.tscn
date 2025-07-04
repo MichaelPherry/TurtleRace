@@ -25,4 +25,7 @@ offset_right = 480.0
 offset_bottom = 433.0
 script = ExtResource("1_u42t0")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+
 [connection signal="item_activated" from="ItemList" to="ItemList" method="_on_item_activated"]

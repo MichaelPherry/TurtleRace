@@ -1,96 +1,181 @@
-[gd_scene load_steps=14 format=3 uid="uid://c2tlf8saaaa6y"]
+[gd_scene load_steps=39 format=3 uid="uid://c2tlf8saaaa6y"]
 
 [ext_resource type="Script" uid="uid://bcx33ch1tgu5t" path="res://turts/Turtle4.gd" id="1_i3oiq"]
-[ext_resource type="Texture2D" uid="uid://b0b1c45gpx43k" path="res://Art/Turtle.png" id="2_xksey"]
+[ext_resource type="Texture2D" uid="uid://b6kduwgcn1flx" path="res://Art/AlexArt/green_turt/Turtle Jog0001.png" id="2_tm1o4"]
+[ext_resource type="Texture2D" uid="uid://bx48w5vxefnax" path="res://Art/AlexArt/green_turt/Turtle Jog0002.png" id="3_yjga4"]
+[ext_resource type="Texture2D" uid="uid://bwpiwa5e5sdv" path="res://Art/AlexArt/green_turt/Turtle Jog0003.png" id="4_mooi8"]
+[ext_resource type="Texture2D" uid="uid://bln1qvs7fq658" path="res://Art/AlexArt/green_turt/Turtle Jog0004.png" id="5_3d6tf"]
+[ext_resource type="Texture2D" uid="uid://byyx6q6pqeyxk" path="res://Art/AlexArt/green_turt/Turtle Jog0005.png" id="6_dxgks"]
+[ext_resource type="Texture2D" uid="uid://dku47sf58b7r1" path="res://Art/AlexArt/green_turt/Turtle Jog0006.png" id="7_pdt7o"]
+[ext_resource type="Texture2D" uid="uid://qqoosjw3anlw" path="res://Art/AlexArt/green_turt/Turtle Jog0007.png" id="8_ci7x5"]
+[ext_resource type="Texture2D" uid="uid://cg3a75ouut8hp" path="res://Art/AlexArt/green_turt/Turtle Jog0008.png" id="9_4occc"]
+[ext_resource type="Texture2D" uid="uid://b12viq0dqsral" path="res://Art/AlexArt/green_turt/Turtle Jog0009.png" id="10_q2e7w"]
+[ext_resource type="Texture2D" uid="uid://e4d3dxng2nm3" path="res://Art/AlexArt/green_turt/Turtle Run0001.png" id="11_cvfkw"]
+[ext_resource type="Texture2D" uid="uid://c2u3pcffwrwx1" path="res://Art/AlexArt/green_turt/Turtle Run0002.png" id="12_p6bdv"]
+[ext_resource type="Texture2D" uid="uid://bd6obykag286c" path="res://Art/AlexArt/green_turt/Turtle Run0003.png" id="13_r1njd"]
+[ext_resource type="Texture2D" uid="uid://bcyh3b85cqd54" path="res://Art/AlexArt/green_turt/Turtle Run0004.png" id="14_1kfoa"]
+[ext_resource type="Texture2D" uid="uid://dc7xu4lwjp7gr" path="res://Art/AlexArt/green_turt/Turtle Run0005.png" id="15_occmr"]
+[ext_resource type="Texture2D" uid="uid://15tddblm87yk" path="res://Art/AlexArt/green_turt/Turtle Run0006.png" id="16_hiodj"]
+[ext_resource type="Texture2D" uid="uid://dt6qfrb7lvrqr" path="res://Art/AlexArt/green_turt/Turtle Run0007.png" id="17_bkrnr"]
+[ext_resource type="Texture2D" uid="uid://d2k2o5fkdkl1p" path="res://Art/AlexArt/green_turt/Turtle Run0008.png" id="18_hbsrc"]
+[ext_resource type="Texture2D" uid="uid://rfx0qv5t45wv" path="res://Art/AlexArt/green_turt/Turtle Run0009.png" id="19_cofmb"]
+[ext_resource type="Texture2D" uid="uid://d1o12pw6ir5k5" path="res://Art/AlexArt/green_turt/Turtle Idle0001.png" id="20_hypuw"]
+[ext_resource type="Texture2D" uid="uid://d2sjdeoim3dql" path="res://Art/AlexArt/green_turt/Turtle Idle0002.png" id="21_yuwa0"]
+[ext_resource type="Texture2D" uid="uid://dughq3p643tfn" path="res://Art/AlexArt/green_turt/Turtle Idle0003.png" id="22_1n2r3"]
+[ext_resource type="Texture2D" uid="uid://bfrt3bal1a0ft" path="res://Art/AlexArt/green_turt/Turtle Idle0004.png" id="23_r7tyb"]
+[ext_resource type="Texture2D" uid="uid://dekcdbqnml65v" path="res://Art/AlexArt/green_turt/Turtle Idle0005.png" id="24_3xqae"]
+[ext_resource type="Texture2D" uid="uid://bl1bep5etutda" path="res://Art/AlexArt/green_turt/Turtle Idle0006.png" id="25_pfs3t"]
+[ext_resource type="Texture2D" uid="uid://fc7ovwigv28n" path="res://Art/AlexArt/green_turt/Turtle Idle0007.png" id="26_0mq0a"]
+[ext_resource type="Texture2D" uid="uid://ddwfn5sesc5f8" path="res://Art/AlexArt/green_turt/Turtle Idle0008.png" id="27_x8am6"]
+[ext_resource type="Texture2D" uid="uid://d18njici70maj" path="res://Art/AlexArt/green_turt/Turtle Idle0009.png" id="28_n5g2f"]
+[ext_resource type="Texture2D" uid="uid://ca0f2irah7qgy" path="res://Art/AlexArt/green_turt/Turtle Idle0010.png" id="29_npxlj"]
+[ext_resource type="Texture2D" uid="uid://dptt4skfj7sac" path="res://Art/AlexArt/green_turt/Turtle Walk0003.png" id="30_uds43"]
+[ext_resource type="Texture2D" uid="uid://b3i83orq6kprg" path="res://Art/AlexArt/green_turt/Turtle Walk0004.png" id="31_7c85m"]
+[ext_resource type="Texture2D" uid="uid://c21iysb4ebxcd" path="res://Art/AlexArt/green_turt/Turtle Walk0005.png" id="32_75cu2"]
+[ext_resource type="Texture2D" uid="uid://duwecreg2ltyk" path="res://Art/AlexArt/green_turt/Turtle Walk0006.png" id="33_d4woh"]
+[ext_resource type="Texture2D" uid="uid://bkyreeiqba0ly" path="res://Art/AlexArt/green_turt/Turtle Walk0007.png" id="34_sc8xa"]
+[ext_resource type="Texture2D" uid="uid://865ywlsbl28t" path="res://Art/AlexArt/green_turt/Turtle Walk0008.png" id="35_s8755"]
+[ext_resource type="Texture2D" uid="uid://bs03vw8vq3tgx" path="res://Art/AlexArt/green_turt/Turtle Walk0009.png" id="36_7qrl2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_06luu"]
-atlas = ExtResource("2_xksey")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_jfox3"]
-atlas = ExtResource("2_xksey")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j5v37"]
-atlas = ExtResource("2_xksey")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x4on8"]
-atlas = ExtResource("2_xksey")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ds1mq"]
-atlas = ExtResource("2_xksey")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uipqf"]
-atlas = ExtResource("2_xksey")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bx07k"]
-atlas = ExtResource("2_xksey")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x1gv3"]
-atlas = ExtResource("2_xksey")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ietje"]
-atlas = ExtResource("2_xksey")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_n7d6t"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_502q6"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_06luu")
+"texture": ExtResource("2_tm1o4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jfox3")
+"texture": ExtResource("3_yjga4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j5v37")
+"texture": ExtResource("4_mooi8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x4on8")
+"texture": ExtResource("5_3d6tf")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ds1mq")
+"texture": ExtResource("6_dxgks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pdt7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ci7x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4occc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q2e7w")
 }],
 "loop": true,
-"name": &"Standing",
-"speed": 5.0
+"name": &"Jog",
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uipqf")
+"texture": ExtResource("11_cvfkw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bx07k")
+"texture": ExtResource("12_p6bdv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_x1gv3")
+"texture": ExtResource("13_r1njd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ietje")
+"texture": ExtResource("14_1kfoa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_occmr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hiodj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bkrnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_hbsrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_cofmb")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_hypuw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yuwa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1n2r3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_r7tyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3xqae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pfs3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0mq0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_x8am6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_n5g2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_npxlj")
+}],
+"loop": true,
+"name": &"Standing",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_uds43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7c85m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_75cu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_d4woh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_sc8xa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_s8755")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7qrl2")
 }],
 "loop": true,
 "name": &"Walking",
-"speed": 3.0
+"speed": 15.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_afxjx"]
-radius = 5.0
-height = 28.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wqrpy"]
+radius = 144.0
+height = 498.0
 
 [node name="Turtle4" type="CharacterBody2D"]
 script = ExtResource("1_i3oiq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_n7d6t")
+sprite_frames = SubResource("SpriteFrames_502q6")
 animation = &"Standing"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
-shape = SubResource("CapsuleShape2D_afxjx")
+shape = SubResource("CapsuleShape2D_wqrpy")

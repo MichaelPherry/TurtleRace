@@ -3,20 +3,20 @@
 [ext_resource type="Script" uid="uid://wpsquwxt73sx" path="res://Items/missile.gd" id="1_ehi04"]
 [ext_resource type="Texture2D" uid="uid://wvxk1lye7tqv" path="res://Art/Coffee Mug 001 16x161.png" id="2_c1xmc"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ml7fo"]
-radius = 9.0
-height = 18.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11aj8"]
+size = Vector2(291, 312)
 
 [node name="Missile" type="Area2D"]
 script = ExtResource("1_ehi04")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(1.125, 1.0625)
+position = Vector2(165, 163.25)
+scale = Vector2(21.75, 21.4688)
 texture = ExtResource("2_c1xmc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
-shape = SubResource("CapsuleShape2D_ml7fo")
+position = Vector2(135.5, 181)
+shape = SubResource("RectangleShape2D_11aj8")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

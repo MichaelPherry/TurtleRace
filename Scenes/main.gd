@@ -4,6 +4,7 @@ var character
 var player_scene
 var enemy_target
 #@onready var temp_enemy = get_node("Turtle2/AnimatedSprite2D/Marker2D")
+var shop = preload("res://Scenes/shop.tscn")
 var main = load("res://Scenes/main.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,5 +57,5 @@ func _on_finish_line_body_exited(body):
 			if len(finished_turts) >= 4:
 				print("\n\n\n\n\nDONE\n\n\n\n")
 				await get_tree().create_timer(0.5).timeout
-				get_tree().change_scene_to_file("res://Scenes/shop.tscn")
 				queue_free()
+				get_tree().change_scene_to_packed(shop)

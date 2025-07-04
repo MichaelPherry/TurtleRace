@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var icon: Texture2D
 
 const player = "human turtle"
-const SPEED = 10
+const SPEED = 100
 var multiplier = 4
 
 #If health falls to zero your speed slows drastically
@@ -24,13 +24,13 @@ func _ready():
 	#Initializes a group to check when a turt has crossed the finish line
 	add_to_group("turt_player")
 	add_to_group("turt4")
-	sprite.play("Walking")
+	sprite.play("Jog")
 	race_health = full_health + health_buff
 	
 	for boost in passives:
 		boost.apply(self)
 	
-	sprite.speed_scale *= multiplier
+	sprite.speed_scale *= (multiplier / 3)
 	
 func _physics_process(delta):
 	if finished == true:
