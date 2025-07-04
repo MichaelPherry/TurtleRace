@@ -5,6 +5,8 @@ var Rare = 28
 var item_data = ItemData.item_data
 var item_rarity
 var random_item
+var main_scene = load("res://Scenes/main.tscn")
+
 #weights will assign a weight to each index, ie index 0 has a weight of 1, index
 #4 has a weight of 0.5 meaning 1 is more likely to get picked
 # Called when the node enters the scene tree for the first time.
@@ -36,5 +38,3 @@ func _process(delta):
 
 func _on_item_activated(index):
 	print("test")
-	
-	pass # Replace with function body.

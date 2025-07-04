@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ihfa4idsjnws"]
+
+[ext_resource type="Script" uid="uid://dyvk5psn3rm0h" path="res://Items/teleporter.gd" id="1_t71w6"]
+
+[resource]
+script = ExtResource("1_t71w6")
+name = "Teleporter"
+description = ""

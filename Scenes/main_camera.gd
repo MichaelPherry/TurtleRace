@@ -33,4 +33,3 @@ func _process(delta):
 	update_zoom(max_pos.y - min_pos.y)
 	
 #quick change
-
