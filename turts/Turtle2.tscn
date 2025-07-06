@@ -170,6 +170,7 @@ radius = 144.0
 height = 498.0
 
 [node name="Turtle2" type="CharacterBody2D"]
+process_mode = 3
 script = ExtResource("1_ch7k7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

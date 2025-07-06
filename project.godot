@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 ItemData="*res://Scripts/ItemData.gd"
+Globals="*res://Globals.gd"
 
 [rendering]
 

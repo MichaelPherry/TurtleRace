@@ -3,11 +3,14 @@ var finished_turts = []
 var character
 var player_scene
 var enemy_target
-#@onready var temp_enemy = get_node("Turtle2/AnimatedSprite2D/Marker2D")
 var shop = preload("res://Scenes/shop.tscn")
+var troll = preload("res://Scenes/troll.tscn")
 var main = load("res://Scenes/main.tscn")
+var change = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	character = Globals.character
+	$shop.visible = false
 	$UI/ItemUse.connect("pressed", Callable(self, "_on_item_use_pressed"))
 	$UI/OptionButton.add_item("Select a target")
 	$UI/OptionButton.add_item("Turtle 1")
@@ -19,7 +22,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if change == true and get_tree().paused == false:
+		change = false
+		print("wahoo")
+		get_tree().change_scene_to_file("res://Scenes/troll.tscn")
+		#get_tree().reload_current_scene()
+		#queue_free()
 
 func _on_item_use_pressed():
 	if enemy_target == null:
@@ -55,7 +63,10 @@ func _on_finish_line_body_exited(body):
 			body.sprite.play("Standing")
 			print("%s has finished the race!" % body.name)
 			if len(finished_turts) >= 4:
-				print("\n\n\n\n\nDONE\n\n\n\n")
-				await get_tree().create_timer(0.5).timeout
-				queue_free()
-				get_tree().change_scene_to_packed(shop)
+				print(get_tree())
+				await get_tree().create_timer(0.3).timeout
+				get_tree().paused = true
+				await get_tree().create_timer(0.1).timeout
+				$shop.visible = true
+				change = true
+				#get_tree().change_scene_to_packed(shop)

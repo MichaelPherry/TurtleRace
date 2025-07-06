@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf44mmwl5sshj"]
+[gd_scene load_steps=10 format=3 uid="uid://bf44mmwl5sshj"]
 
 [ext_resource type="Script" uid="uid://0r1cxtqlws6t" path="res://Scenes/main.gd" id="1_0kdqu"]
 [ext_resource type="Texture2D" uid="uid://bjghsep8234jf" path="res://Art/AlexArt/Forest Stage v2 (no turtles).png" id="2_6bp64"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6ted173sekb" path="res://turts/Turtle3.tscn" id="4_k5tcr"]
 [ext_resource type="PackedScene" uid="uid://c2tlf8saaaa6y" path="res://turts/Turtle4.tscn" id="5_gfehn"]
 [ext_resource type="Script" uid="uid://bp0jppirvh1i0" path="res://Scenes/main_camera.gd" id="7_8yu1y"]
+[ext_resource type="PackedScene" uid="uid://bvj26mfnxaoal" path="res://Scenes/shop.tscn" id="8_344ge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpk1i"]
 size = Vector2(6136.5, 256.281)
@@ -63,6 +64,9 @@ offset_left = 947.0
 offset_top = 518.0
 offset_right = 1145.0
 offset_bottom = 553.0
+
+[node name="shop" parent="." instance=ExtResource("8_344ge")]
+visible = false
 
 [connection signal="body_exited" from="FinishLine" to="." method="_on_finish_line_body_exited"]
 [connection signal="pressed" from="UI/ItemUse" to="." method="_on_item_use_pressed"]

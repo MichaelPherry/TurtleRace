@@ -173,6 +173,7 @@ height = 498.0
 script = ExtResource("1_8x44d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 3
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_n7d6t")
 animation = &"Standing"

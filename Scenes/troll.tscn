@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyuq23uokgecw"]
+
+[ext_resource type="Script" uid="uid://s5tdhk7jyfu8" path="res://troll.gd" id="1_fb6ty"]
+[ext_resource type="Texture2D" uid="uid://dbfbbl7gblvne" path="res://Art/turtle troll.png" id="2_natlp"]
+
+[node name="troll" type="Node2D"]
+script = ExtResource("1_fb6ty")
+
+[node name="TurtleTroll" type="Sprite2D" parent="."]
+position = Vector2(582, 331)
+texture = ExtResource("2_natlp")

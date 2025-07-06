@@ -11,6 +11,7 @@ var main_scene = load("res://Scenes/main.tscn")
 #4 has a weight of 0.5 meaning 1 is more likely to get picked
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	return
 	print(item_data)
 	var item_picked = []
 	for item in range(4):
