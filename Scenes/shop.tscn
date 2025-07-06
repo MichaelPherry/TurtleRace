@@ -1,31 +1,87 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvj26mfnxaoal"]
+[gd_scene load_steps=7 format=3 uid="uid://bvj26mfnxaoal"]
 
+[ext_resource type="Script" uid="uid://gfjm78bj4cle" path="res://Scenes/shop.gd" id="1_2shtd"]
 [ext_resource type="Script" uid="uid://vakxtqfw1mmx" path="res://Scenes/ItemList.gd" id="1_u42t0"]
 
-[node name="shop" type="Node2D"]
+[sub_resource type="Animation" id="Animation_fdj0q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
-[node name="Label" type="Label" parent="."]
-offset_left = 115.0
-offset_top = 78.0
-offset_right = 653.0
-offset_bottom = 323.0
-text = "SHOP
-I'm to tired atm
+[sub_resource type="Animation" id="Animation_2shtd"]
+resource_name = "TransIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -700), Vector2(0, 0)]
+}
 
-:3
-for now want to list all of the items that we have and put them in the shop. 
-So that we can get down buying an item and making sure it's then in the players
-inventory.
-Eventually we'll have it be randomized and what not"
+[sub_resource type="Animation" id="Animation_io27d"]
+resource_name = "TransOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 700)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k6jq0"]
+_data = {
+&"RESET": SubResource("Animation_fdj0q"),
+&"TransIn": SubResource("Animation_2shtd"),
+&"TransOut": SubResource("Animation_io27d")
+}
+
+[node name="shop" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_2shtd")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1151.0
+offset_bottom = 651.0
 
 [node name="ItemList" type="ItemList" parent="."]
-offset_left = 121.0
-offset_top = 296.0
-offset_right = 480.0
-offset_bottom = 433.0
+visible = false
+offset_left = 45.0
+offset_top = 28.0
+offset_right = 1111.0
+offset_bottom = 626.0
 script = ExtResource("1_u42t0")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 326)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_k6jq0")
+}
+
+[node name="Button" type="Button" parent="."]
+offset_left = 841.0
+offset_top = 533.0
+offset_right = 1133.0
+offset_bottom = 637.0
+text = "Next Round"
 
 [connection signal="item_activated" from="ItemList" to="ItemList" method="_on_item_activated"]
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

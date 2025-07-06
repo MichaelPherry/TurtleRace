@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 const player = "human turtle"
 const SPEED = 100
-var multiplier = 4
+var multiplier = 7
 
 #If health falls to zero your speed slows drastically
 const full_health = 3
