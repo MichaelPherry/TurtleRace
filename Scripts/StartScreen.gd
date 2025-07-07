@@ -1,5 +1,4 @@
 extends Node2D
-var main_scene = preload("res://Scenes/main.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,8 +10,7 @@ func _process(delta):
 
 func change_scene(player):
 	Globals.character = player
-	get_tree().change_scene_to_packed(main_scene)
-	queue_free()
+	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_player_1_pressed():
 	change_scene("Turtle")

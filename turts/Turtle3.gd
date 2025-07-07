@@ -3,30 +3,33 @@ extends CharacterBody2D
 @export var description: String
 @export var icon: Texture2D
 
-const player = "human turtle"
+const player = "turt3"
 const SPEED = 100
-var multiplier = 7
+var multiplier
 
 #If health falls to zero your speed slows drastically
-const full_health = 3
 var health_buff = 0
-var race_health = 3
+var race_health
 var health_check = true
 var finished = false
 var invincible = false
 @onready var sprite = $AnimatedSprite2D
 
-var passives = [preload("res://Passives/coffee.tres")]
+var passives
 var item_holding = preload("res://Items/launcher.tres")
 
 func _ready():
+	multiplier = Globals.turtle_stats[player]["Multiplier"]
+	race_health = Globals.turtle_stats[player]["Health"]
+	passives = Globals.turtle_stats[player]["Passives"]
 	#Initializes a group to check when a turt has crossed the finish line
 	add_to_group("turt_player")
 	add_to_group("turt3")
 	sprite.play("Jog")
-	race_health = full_health + health_buff
+	race_health = race_health + health_buff
 	
 	for boost in passives:
+		boost = load(boost)
 		boost.apply(self)
 	
 	sprite.speed_scale *= (multiplier / 3)
