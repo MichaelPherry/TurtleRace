@@ -24,10 +24,7 @@ func _ready():
 func _process(delta):
 	if change == true and get_tree().paused == false:
 		change = false
-		print("wahoo")
 		get_tree().change_scene_to_file("res://Scenes/troll.tscn")
-		#get_tree().reload_current_scene()
-		#queue_free()
 
 func _on_item_use_pressed():
 	if enemy_target == null:
@@ -63,7 +60,6 @@ func _on_finish_line_body_exited(body):
 			body.sprite.play("Standing")
 			print("%s has finished the race!" % body.name)
 			if len(finished_turts) >= 4:
-				print(get_tree())
 				await get_tree().create_timer(0.3).timeout
 				get_tree().paused = true
 				await get_tree().create_timer(0.1).timeout
