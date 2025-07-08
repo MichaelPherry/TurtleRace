@@ -22,7 +22,7 @@ func _ready():
 			item_rarity = "Epic"
 		
 		random_item = item_data[item_rarity].keys().pick_random()
-		while random_item in item_picked:									#Used to make sure the same item doesn't appear in the shop more than once
+		while random_item in item_picked:		#Used to make sure the same item doesn't appear in the shop more than once
 			random_item = item_data[item_rarity].keys().pick_random()		#This is for sure ass code
 		print(random_item)
 		var texture = load(item_data[item_rarity][random_item]["ItemImage"]) as Texture2D

@@ -1,28 +1,56 @@
 {
   "Common": {
-	"Coffee": {
-	  "ItemDesc": "Love my cup of Joe",
-	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
-	},
-	"Gun": {
-	  "ItemDesc": "Shoot my Opps!",
-	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
-	},
-	"Slime": {
-	  "ItemDesc": "Slow down enemy",
-	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
-	}
+    "Coffee": {
+      "ItemDesc": "Love my cup of Joe",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Gun": {
+      "ItemDesc": "Shoot my Opps!",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Slime": {
+      "ItemDesc": "Slow down enemy",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Temp1": {
+      "ItemDesc": "Temp",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    }
   },
   "Rare": {
-	"Running Shoes": {
-	  "ItemDesc": "Run quick",
-	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
-	}
+    "Running Shoes": {
+      "ItemDesc": "Run quick",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Guardian turtle": {
+      "ItemDesc": "Prevents a hit of damage and it's effects",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Temp3": {
+      "ItemDesc": "temp",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Temp4": {
+      "ItemDesc": "temp",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    }
   },
   "Epic": {
-	"Glock with Switch": {
-	  "ItemDesc": "Shoot my Opps with Speed!",
-	  "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
-	}
+    "Glock with Switch": {
+      "ItemDesc": "Shoot my Opps with Speed!",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Warp Block": {
+      "ItemDesc": "Randomly swaps positions with you and a opponent",
+      "ItemImage": null
+    },
+    "Temp5": {
+      "ItemDesc": "temp",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    },
+    "Temp6": {
+      "ItemDesc": "temp",
+      "ItemImage": "res://Art/Coffee Mug 001 16x161.png"
+    }
   }
 }
