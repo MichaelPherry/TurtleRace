@@ -4,6 +4,7 @@ class_name Item
 @export var name: String
 @export var description: String
 @export var icon: Texture2D
+@export var cooldown: int
 
 func apply(main, user, target):
 	push_warning("apply() not implemented for %s" % name)

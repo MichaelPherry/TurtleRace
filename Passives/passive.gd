@@ -5,7 +5,7 @@ class_name Passive
 @export var description: String
 @export var icon: Texture2D
 
-func apply(turt):
+func apply(turt, tree):
 	push_warning("apply() not implemented for %s" % name)
 
 

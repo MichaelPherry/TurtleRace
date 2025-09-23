@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpytua0heth6o"]
+
+[ext_resource type="Texture2D" uid="uid://bq8jfej05nfkp" path="res://icon.svg" id="1_dprv8"]
+[ext_resource type="Script" uid="uid://do2tuw3s727d5" path="res://safety_net.gd" id="1_x8al1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8al1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dprv8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jld4h"]
+size = Vector2(123, 128)
+
+[node name="SafetyNet" type="CharacterBody2D"]
+script = ExtResource("1_x8al1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_x8al1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -2)
+shape = SubResource("RectangleShape2D_jld4h")

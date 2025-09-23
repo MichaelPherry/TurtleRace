@@ -6,3 +6,4 @@
 script = ExtResource("1_t71w6")
 name = "Teleporter"
 description = ""
+cooldown = 5

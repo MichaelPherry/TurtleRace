@@ -4,6 +4,7 @@ extends Area2D
 var target
 var turn_speed = 200
 var damage = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass

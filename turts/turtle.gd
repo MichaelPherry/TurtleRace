@@ -16,11 +16,14 @@ var invincible = false
 @onready var sprite = $AnimatedSprite2D
 
 var passives
-var item_holding = preload("res://Items/launcher.tres")
+var items
+var item_holding = load(Globals.turtle_stats[player]["Item"][0])
+var cooldown = item_holding.cooldown
 func _ready():
 	multiplier = Globals.turtle_stats[player]["Multiplier"]
 	race_health = Globals.turtle_stats[player]["Health"]
 	passives = Globals.turtle_stats[player]["Passives"]
+	items = Globals.turtle_stats[player]["Item"]
 	#item_holding = Globals.turtle_stats[player]["Item"]
 	#Initializes a group to check when a turt has crossed the finish line
 	print(multiplier)
@@ -31,21 +34,35 @@ func _ready():
 	
 	for boost in passives:
 		boost = load(boost)
-		boost.apply(self)
+		boost.apply(self, get_tree())
 	
 	sprite.speed_scale *= (multiplier / 3)
 	
 func _physics_process(delta):
 	if finished == true:
 		return
-	if health_check and race_health <= 0:
-		health_check = false
-		multiplier *= 0.5
-		print('Turt DEAD')
+	if cooldown <= 0.0:
+		var myself = self
+		var enemy = get_turtle_by_name("turt1")
+		use_item(get_tree(), myself, enemy) 
+		cooldown = item_holding.cooldown
+	cooldown -= delta
 	velocity.y = SPEED * multiplier
 	move_and_slide()
+	
+func get_turtle_by_name(myself):
+	var turts = get_tree().get_nodes_in_group("turt_player")
+	var shuffled = turts.duplicate()
+	shuffled.shuffle()
+	for t in shuffled:
+		if t not in Globals.finished_turts:
+			if t.player != myself:
+				return t
+	return null
 
 func use_item(main, pos, target):
+	if target == null:
+		return
 	item_holding.apply(main, pos, target)
 	
 func take_damage(amt):
