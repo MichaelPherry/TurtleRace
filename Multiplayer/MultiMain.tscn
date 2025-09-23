@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2xx6svrfl2rk"]
+
+[ext_resource type="Script" uid="uid://d2gj74g1ypeka" path="res://Multiplayer/MultiMain.gd" id="1_1kgu3"]
+[ext_resource type="Texture2D" uid="uid://bjghsep8234jf" path="res://Art/AlexArt/Forest Stage v2 (no turtles).png" id="2_0i81a"]
+[ext_resource type="PackedScene" uid="uid://cws4duplrljj5" path="res://Multiplayer/multiplayer_menu.tscn" id="3_0i81a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gu36"]
+size = Vector2(6162.5, 262.5)
+
+[node name="MultiMain" type="Node2D"]
+script = ExtResource("1_1kgu3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4768, 4783)
+texture = ExtResource("2_0i81a")
+
+[node name="Finishline" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finishline"]
+position = Vector2(4930.75, 7853.75)
+shape = SubResource("RectangleShape2D_8gu36")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="ItemUse" type="Button" parent="UI"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -237.0
+offset_right = -8.0
+offset_bottom = -142.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Use Item"
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionButton" type="OptionButton" parent="UI"]
+offset_left = 947.0
+offset_top = 518.0
+offset_right = 1145.0
+offset_bottom = 553.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Host_Join" parent="." instance=ExtResource("3_0i81a")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(5000, 5000)
+zoom = Vector2(0.05, 0.05)
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://db7g30qwdmlgt")
+spawn_path = NodePath("..")
+spawn_limit = 4
+
+[connection signal="area_exited" from="Finishline" to="." method="_on_finishline_area_exited"]
+[connection signal="pressed" from="UI/ItemUse" to="." method="_on_item_use_pressed"]
+[connection signal="item_selected" from="UI/OptionButton" to="." method="_on_option_button_item_selected"]

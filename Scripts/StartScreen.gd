@@ -14,7 +14,7 @@ func change_scene(player):
 
 func _on_player_1_pressed():
 	change_scene("Turtle")
-
+	
 func _on_player_2_pressed():
 	change_scene("Turtle2")
 
