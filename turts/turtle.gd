@@ -4,9 +4,9 @@ extends CharacterBody2D
 @export var icon: Texture2D
 
 const player = "turt1"
-const SPEED = 100
+var SPEED = 100
 var multiplier
-
+ 
 #If health falls to zero your speed slows drastically
 var health_buff = 0
 var race_health
@@ -18,15 +18,18 @@ var invincible = false
 var passives
 var items
 var item_holding = load(Globals.turtle_stats[player]["Item"][0])
+var projectile
+var cooldown_decrease
 var cooldown = item_holding.cooldown
 func _ready():
 	multiplier = Globals.turtle_stats[player]["Multiplier"]
 	race_health = Globals.turtle_stats[player]["Health"]
 	passives = Globals.turtle_stats[player]["Passives"]
 	items = Globals.turtle_stats[player]["Item"]
+	cooldown_decrease = Globals.turtle_stats[player]["Cooldown"]
+	projectile = Globals.turtle_stats[player]["Projectile_speed"]
 	#item_holding = Globals.turtle_stats[player]["Item"]
 	#Initializes a group to check when a turt has crossed the finish line
-	print(multiplier)
 	add_to_group("turt_player")
 	add_to_group(player)
 	sprite.play("Jog")
@@ -45,7 +48,7 @@ func _physics_process(delta):
 		var myself = self
 		var enemy = get_turtle_by_name("turt1")
 		use_item(get_tree(), myself, enemy) 
-		cooldown = item_holding.cooldown
+		cooldown = item_holding.cooldown - cooldown_decrease
 	cooldown -= delta
 	velocity.y = SPEED * multiplier
 	move_and_slide()

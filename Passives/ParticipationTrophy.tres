@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ij5u51uqu4kj"]
+
+[ext_resource type="Script" uid="uid://dnhhq6p3y5li1" path="res://Passives/ParticipationTrophy.gd" id="1_aijvv"]
+
+[resource]
+script = ExtResource("1_aijvv")
+name = "ParticipationTrophy"
+description = "The worst you placed last round the faster you'll go"

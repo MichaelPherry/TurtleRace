@@ -1,15 +1,25 @@
-[gd_scene load_steps=39 format=3 uid="uid://db7g30qwdmlgt"]
+[gd_scene load_steps=49 format=3 uid="uid://db7g30qwdmlgt"]
 
 [ext_resource type="Script" uid="uid://bggc13l7fuq3u" path="res://turts/turtle.gd" id="1_8x44d"]
 [ext_resource type="Texture2D" uid="uid://b6kduwgcn1flx" path="res://Art/AlexArt/green_turt/Turtle Jog0001.png" id="2_l0eul"]
+[ext_resource type="Texture2D" uid="uid://bwci6osr6o3nu" path="res://Art/AlexArt/Items/Fishile/Turtle Fishile Start0001.png" id="2_oxhq5"]
+[ext_resource type="Texture2D" uid="uid://ggnc1s6ktok3" path="res://Art/AlexArt/Items/Fishile/Turtle Fishile Start0002.png" id="3_32dyw"]
 [ext_resource type="Texture2D" uid="uid://bx48w5vxefnax" path="res://Art/AlexArt/green_turt/Turtle Jog0002.png" id="3_siq57"]
+[ext_resource type="Texture2D" uid="uid://crin3f4rvfo30" path="res://Art/AlexArt/Items/Fishile/Turtle Fishile Start0003.png" id="4_qm4xo"]
 [ext_resource type="Texture2D" uid="uid://bwpiwa5e5sdv" path="res://Art/AlexArt/green_turt/Turtle Jog0003.png" id="4_xumtq"]
 [ext_resource type="Texture2D" uid="uid://bln1qvs7fq658" path="res://Art/AlexArt/green_turt/Turtle Jog0004.png" id="5_5psut"]
+[ext_resource type="Texture2D" uid="uid://b6klc11l80vl7" path="res://Art/AlexArt/Items/Fishile/Turtle Fishile Start0004.png" id="5_p8m5s"]
 [ext_resource type="Texture2D" uid="uid://byyx6q6pqeyxk" path="res://Art/AlexArt/green_turt/Turtle Jog0005.png" id="6_082ww"]
+[ext_resource type="Texture2D" uid="uid://cg1wnvnrlr6vr" path="res://Art/AlexArt/Items/Fishile/Turtle Fishile Start0005.png" id="6_ufohg"]
+[ext_resource type="Texture2D" uid="uid://b7xxe0o7s4lwo" path="res://Art/AlexArt/Items/Fishile/Turtle Fissile Fire0001.png" id="7_eifhq"]
 [ext_resource type="Texture2D" uid="uid://dku47sf58b7r1" path="res://Art/AlexArt/green_turt/Turtle Jog0006.png" id="7_h2rbj"]
+[ext_resource type="Texture2D" uid="uid://cncf4bee2l33o" path="res://Art/AlexArt/Items/Fishile/Turtle Fissile Fire0002.png" id="8_w8ntc"]
 [ext_resource type="Texture2D" uid="uid://qqoosjw3anlw" path="res://Art/AlexArt/green_turt/Turtle Jog0007.png" id="8_y5frv"]
 [ext_resource type="Texture2D" uid="uid://cg3a75ouut8hp" path="res://Art/AlexArt/green_turt/Turtle Jog0008.png" id="9_5mfmb"]
+[ext_resource type="Texture2D" uid="uid://dgvjwjf5dr2pt" path="res://Art/AlexArt/Items/Fishile/Turtle Fissile Fire0003.png" id="9_avfu6"]
 [ext_resource type="Texture2D" uid="uid://b12viq0dqsral" path="res://Art/AlexArt/green_turt/Turtle Jog0009.png" id="10_cbbpt"]
+[ext_resource type="Texture2D" uid="uid://c8b2ok45vt8l0" path="res://Art/AlexArt/Items/Fishile/Turtle Fissile Fire0004.png" id="10_fdhhb"]
+[ext_resource type="Texture2D" uid="uid://br1nq85wahy04" path="res://Art/AlexArt/Items/Fishile/Turtle Fissile Fire0005.png" id="11_4q2yd"]
 [ext_resource type="Texture2D" uid="uid://e4d3dxng2nm3" path="res://Art/AlexArt/green_turt/Turtle Run0001.png" id="11_qaitg"]
 [ext_resource type="Texture2D" uid="uid://c2u3pcffwrwx1" path="res://Art/AlexArt/green_turt/Turtle Run0002.png" id="12_mfy18"]
 [ext_resource type="Texture2D" uid="uid://bd6obykag286c" path="res://Art/AlexArt/green_turt/Turtle Run0003.png" id="13_74mxv"]
@@ -39,6 +49,41 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n7d6t"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_oxhq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_32dyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qm4xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p8m5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ufohg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eifhq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w8ntc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_avfu6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fdhhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4q2yd")
+}],
+"loop": false,
+"name": &"Fissile",
+"speed": 12.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_l0eul")
@@ -175,10 +220,11 @@ script = ExtResource("1_8x44d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 process_mode = 3
 texture_filter = 1
+position = Vector2(235, -90)
 sprite_frames = SubResource("SpriteFrames_n7d6t")
-animation = &"Standing"
-frame = 1
-frame_progress = 0.187432
+animation = &"Fissile"
+frame = 9
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_oxhq5")
