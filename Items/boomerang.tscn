@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://1i8b8mfd38x5"]
+
+[ext_resource type="Script" uid="uid://nxijjvdeqt0h" path="res://boomerang.gd" id="1_q533l"]
+[ext_resource type="Texture2D" uid="uid://co357ykwwcxqx" path="res://Art/boomerang.png" id="2_7ubvr"]
+
+[sub_resource type="Animation" id="Animation_1wpdv"]
+resource_name = "Boomerang"
+length = 0.267
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_pso6o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mpwgm"]
+_data = {
+&"Boomerang": SubResource("Animation_1wpdv"),
+&"RESET": SubResource("Animation_pso6o")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hc42"]
+radius = 13.0384
+
+[node name="Boomerang" type="Area2D"]
+script = ExtResource("1_q533l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -16)
+texture = ExtResource("2_7ubvr")
+hframes = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_mpwgm")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
+shape = SubResource("CircleShape2D_0hc42")

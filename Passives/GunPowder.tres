@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://donpsnhoyfa0r"]
+
+[ext_resource type="Script" uid="uid://c66q312ae5icq" path="res://Passives/GunPowder.gd" id="1_xlwlc"]
+
+[resource]
+script = ExtResource("1_xlwlc")
+name = "Gun Powder"
+description = "Projectile speed is increased"

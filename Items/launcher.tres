@@ -8,4 +8,4 @@ script = ExtResource("2_r5rg8")
 missile = ExtResource("1_vxqha")
 name = "Launcher"
 description = ""
-cooldown = 2
+cooldown = 3

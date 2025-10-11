@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bsy3sewkxuwv0"]
+
+[ext_resource type="Script" uid="uid://co8mnb35obhu5" path="res://Passives/Wrench.gd" id="1_gg1bl"]
+
+[resource]
+script = ExtResource("1_gg1bl")
+name = "Wrench"
+description = "Slightly decreases cooldown time for items"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://by3p60qf7ao2a"]
+
+[ext_resource type="PackedScene" uid="uid://1i8b8mfd38x5" path="res://Items/boomerang.tscn" id="1_fsoim"]
+[ext_resource type="Script" uid="uid://dhg3edxoej6kv" path="res://Items/boomerang_launcher.gd" id="2_iltdm"]
+
+[resource]
+script = ExtResource("2_iltdm")
+boomerang = ExtResource("1_fsoim")
+name = "Boomerang"
+description = ""
+cooldown = 2

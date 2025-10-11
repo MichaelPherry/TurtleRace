@@ -5,8 +5,10 @@ var player_scene
 var enemy_target
 var shop = preload("res://Scenes/shop.tscn")
 var change = false
+var place
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	place = 1
 	Globals.finished_turts = []
 	Globals.what_pos = {"turt1": 0, "turt2": 0, "turt3": 0, "turt4": 0}
 	character = Globals.character
@@ -25,6 +27,8 @@ func _process(delta):
 func _on_finish_line_body_exited(body):
 	if body.is_in_group("turt_player"):
 		if body.name not in Globals.finished_turts:
+			Globals.turtle_stats[body.player]['Placing'] = place
+			place += 1
 			Globals.finished_turts.append(body)
 			body.finished = true
 			body.sprite.speed_scale = 1

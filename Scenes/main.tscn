@@ -43,34 +43,7 @@ position = Vector2(4935, 2166)
 zoom = Vector2(0.15, 0.15)
 script = ExtResource("7_8yu1y")
 
-[node name="UI" type="CanvasLayer" parent="."]
-visible = false
-
-[node name="ItemUse" type="Button" parent="UI"]
-visible = false
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -210.0
-offset_top = -237.0
-offset_right = -8.0
-offset_bottom = -142.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Use Item"
-
-[node name="OptionButton" type="OptionButton" parent="UI"]
-visible = false
-offset_left = 947.0
-offset_top = 518.0
-offset_right = 1145.0
-offset_bottom = 553.0
-
 [node name="shop" parent="." instance=ExtResource("8_344ge")]
 visible = false
 
 [connection signal="body_exited" from="FinishLine" to="." method="_on_finish_line_body_exited"]
-[connection signal="pressed" from="UI/ItemUse" to="." method="_on_item_use_pressed"]
-[connection signal="item_selected" from="UI/OptionButton" to="." method="_on_option_button_item_selected"]
